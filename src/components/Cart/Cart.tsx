@@ -1,28 +1,31 @@
+import { useSelector } from 'react-redux'
 import Modal from '../UI/Modal'
 import classes from './Cart.module.css'
-
+import Order from './Order'
+import './Cart.css'
 const Cart = (props) => {
-  const cartItems = 
-   <ul className={classes['cart-items']}>
-    {[{ id: 'c1', name: 'Sushi', amount: 2, price: 12.99}].map((item) => (
-        <li key={item.id}>{item.name}</li>
-    ))}
-  </ul>  
+  
+  const cartList = useSelector(state => state.mealReducer.cartList)
+  const total = useSelector(state => state.mealReducer.total) 
   
   return (
-    <Modal>
-        {cartItems}
-        <div className={classes.total}>
-            <span>Total Amount</span>
-            <span>35.62</span>
-        </div>
-        <div className={classes.actions}>
-           <button className={classes['button--alt']} onClick={props.onClose}>Close</button>
-           <button className={classes.button}>Order</button>
-        </div>
-    </Modal>
-   
-
+    <>
+        {cartList.map((item) => (
+          <>
+            <div className='total'>
+             <span>{item.name}</span>
+             <span>${item.price}</span>
+             </div>
+          </>
+        ))} 
+         <span className='span'>Total Amount</span>
+         <span className='span'>${total}</span>
+         <Order/>
+         <div className='action'>
+             <button className='close'>Close</button>
+             <button className='Order'>Order</button>
+           </div>
+    </>
   )
 }
 

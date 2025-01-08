@@ -1,17 +1,22 @@
 
+import { Link } from "react-router-dom"
 import CartIcon from "../Cart/CartIcon"
 import classes from './HeaderCartButton.module.css'
+import { useSelector } from "react-redux"
 
 const HeaderCartButton = (props) => {
- 
+  const cartList = useSelector(state => state.mealReducer.cartList)
+
   return (
-    <button className={classes.button} onClick={props.onClick}>
+    <Link to='/cart'>
+    <button className={classes.button} >
         <span className={classes.icon}>
           <CartIcon/>
         </span>
         <span>Your Cart</span>
-        <span className={classes.badge}>3</span>
+        <span className={classes.badge}>{cartList.length}</span>
     </button>
+    </Link>
   )
 }
 

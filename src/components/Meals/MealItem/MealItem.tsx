@@ -1,9 +1,11 @@
+import { useDispatch } from 'react-redux';
+import { add_to_cart } from '../../../store/MealSlice';
 import classes from './MealItem.module.css'
-import MealItemForm from './MealItemForm';
+//import MealItemForm from './MealItemForm';
 const MealItem = (props:any) => {
 
   const price = `$${props.price.toFixed(2)}`;
-
+  const dispatch = useDispatch()
   return (
    <li className={classes.meal}>
     <div>
@@ -12,7 +14,8 @@ const MealItem = (props:any) => {
       <div className={classes.price}>{price}</div>
     </div>
     <div>
-      <MealItemForm />
+      {/* <MealItemForm /> */}
+      <button onClick={() => dispatch(add_to_cart(props))}>Add</button>
     </div>
    </li>
   )

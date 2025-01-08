@@ -8,8 +8,7 @@ const Meals = () => {
   return (
     <>
         <MealsSummary/>
-        <AvailableMeals/>
-        <Cart/>
+        <AvailableMeals/> 
     </>
   )
 }

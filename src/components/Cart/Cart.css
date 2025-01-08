@@ -1,0 +1,97 @@
+.total {
+    width: 700px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px 0;
+    margin-left: 300px;
+    padding: 10px;
+    background-color: hsla(12, 84%, 22%, 0.918);
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .total span {
+    font-size:20px;
+    font-weight: 700;
+    color: #ffffff;
+  }
+  
+  /* Styling for the total amount section */
+  .span {
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    margin: 10px 0;
+    color: #444;
+  }
+  
+  /* Styling for the action buttons */
+  .action {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 10px;
+  }
+  
+  .close {
+    padding: 12px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #555;
+    background-color: transparent;
+    border: 1px solid #bbb;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  
+  .close:hover {
+    background-color: #f0f0f0;
+    border-color: #888;
+    color: #333;
+  }
+  
+  .Order {
+    padding: 12px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  
+  .Order:hover {
+    background-color: #0056b3;
+  }
+  
+  .action button:focus {
+    outline: none;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .total {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .total span {
+      margin-bottom: 5px;
+    }
+  
+    .action {
+      flex-direction: column;
+      gap: 5px;
+    }
+  
+    .close,
+    .Order {
+      width: 100%;
+    }
+  }
