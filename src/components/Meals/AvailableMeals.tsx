@@ -1,52 +1,33 @@
-import Card from '../UI/Card';
-import classes from './AvailableMeals.module.css'
-import MealItem from './MealItem/MealItem';
+import { useEffect, useState } from 'react';
 
-export const DUMMY_MEALS = [
-    {
-      id: 'm1',
-      name: 'Sushi',
-      description: 'Finest fish and veggies',
-      price: 22,
-    },
-    {
-      id: 'm2',
-      name: 'Schnitzel',
-      description: 'A german specialty!',
-      price: 16,
-    },
-    {
-      id: 'm3',
-      name: 'Barbecue Burger',
-      description: 'American, raw, meaty',
-      price: 32,
-    },
-    {
-      id: 'm4',
-      name: 'Green Bowl',
-      description: 'Healthy...and green...',
-      price: 18,
-    },
-  ];
+import MealItem from './MealItem/MealItem';
+import { collection, getDocs } from 'firebase/firestore';
+import { db } from '../../Firebase/config';
+
+
 
 const AvailableMeals = () => {
-  
- // const mealsList = DUMMY_MEALS.map(meal => <MealItem key={meal.id} name={meal.name} description={meal.description} price={meal.price }>{meal.name}</MealItem>)
-  
+  const [posts, setPosts] = useState([])
+  const postsRef = collection(db, "posts")
+
+  useEffect(() => {
+    async function getPosts(){
+     const data = await getDocs(postsRef)
+     setPosts(data.docs.map((document) => (
+       {...document.data(), id: document.id}
+     )))
+   }
+   getPosts()
+   },[postsRef])
+
+
   return (
       <section>
-        {DUMMY_MEALS.map((meals) => (
+        {posts.map((meals) => (
           <MealItem key={meals.id} meals={meals}/>
         ))}
       </section>
 
-  //  <section className={classes.meals}>   
-  //     <Card> 
-  //       <ul>  
-  //        {mealsList}
-  //       </ul>
-  //     </Card>
-  //  </section>
   )
 }
 

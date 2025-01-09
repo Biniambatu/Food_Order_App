@@ -17,7 +17,7 @@ const Cart = () => {
         {cartList.map((item) => (
           <>
             <div className='total'>
-             <span>{item.name}</span>
+             <span >{item.name}</span>
              <span>${item.price}</span>
              <button className='remove' onClick={() => dispatch(remove_from_cart(item))}>Remove</button>
             </div>
