@@ -1,10 +1,10 @@
 .total {
-    width: 700px;
+   
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: 15px 0;
-    margin-left: 300px;
+   
     padding: 10px;
     background-color: hsla(12, 84%, 22%, 0.918);
     border: 1px solid #e0e0e0;
@@ -93,5 +93,168 @@
     .close,
     .Order {
       width: 100%;
+    }
+  }
+  /* Styling for the remove button */
+.add {
+    display: inline-block;
+    padding: 10px 15px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #833304;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  /* Hover effect for the remove button */
+  .add:hover {
+    background-color: #ffffff;
+    transform: scale(1.05);
+  }
+  
+  /* Focus effect for the remove button */
+  .add:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(255, 77, 77, 0.8);
+  }
+  
+  /* Disabled state for the remove button */
+  .add:disabled {
+    background-color: #ffcccc;
+    cursor: not-allowed;
+    color: #666;
+  }
+  
+  /* Responsive design for smaller screens */
+  @media (max-width: 768px) {
+    .add {
+      width: 100%;
+      padding: 12px;
+      font-size: 16px;
+    }
+  }
+  .remove {
+    display: inline-block;
+    padding: 10px 15px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #0e02b6;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  /* Hover effect for the remove button */
+  .add:hover {
+    background-color: #1700e6;
+    transform: scale(1.05);
+  }
+  
+  /* Focus effect for the remove button */
+  .add:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(12, 1, 165, 0.8);
+  }
+  
+  /* Disabled state for the remove button */
+  .add:disabled {
+    background-color: #ffcccc;
+    cursor: not-allowed;
+    color: #666;
+  }
+  
+  /* Responsive design for smaller screens */
+  @media (max-width: 768px) {
+    .add {
+      width: 100%;
+      padding: 12px;
+      font-size: 16px;
+    }
+  }
+  
+
+  .remove {
+    display: inline-block;
+    padding: 10px 15px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #b60303;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  /* Hover effect for the remove button */
+  .remove:hover {
+    background-color: #ffffff;
+    transform: scale(1.05);
+  }
+  
+  /* Focus effect for the remove button */
+  .remove:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(255, 77, 77, 0.8);
+  }
+  
+  /* Disabled state for the remove button */
+  .remove:disabled {
+    background-color: #ffcccc;
+    cursor: not-allowed;
+    color: #666;
+  }
+  
+  /* Responsive design for smaller screens */
+  @media (max-width: 768px) {
+    .remove {
+      width: 100%;
+      padding: 12px;
+      font-size: 16px;
+    }
+  }
+  .remove {
+    display: inline-block;
+    padding: 10px 15px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #b60202;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  /* Hover effect for the remove button */
+  .remove:hover {
+    background-color: #e60000;
+    transform: scale(1.05);
+  }
+  
+  /* Focus effect for the remove button */
+  .remove:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(165, 1, 1, 0.8);
+  }
+  
+  /* Disabled state for the remove button */
+  .remove:disabled {
+    background-color: #ffcccc;
+    cursor: not-allowed;
+    color: #666;
+  }
+  
+  /* Responsive design for smaller screens */
+  @media (max-width: 768px) {
+    .remove {
+      width: 100%;
+      padding: 12px;
+      font-size: 16px;
     }
   }
